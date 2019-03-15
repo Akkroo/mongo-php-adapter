@@ -355,7 +355,7 @@ class MongoCursor extends AbstractCursor implements Iterator
     public function skip($num)
     {
         $this->errorIfOpened();
-        $this->skip = $num;
+        $this->skip = (int) $num;
 
         return $this;
     }
